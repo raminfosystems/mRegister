@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import {MaskitoModule} from "@maskito/angular";
+import {UserRegistrationComponent} from "../components/user-registration/user-registration.component";
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonicModule],
+  imports: [IonicModule, MaskitoModule, UserRegistrationComponent],
 })
 export class HomePage {
   constructor() {}
