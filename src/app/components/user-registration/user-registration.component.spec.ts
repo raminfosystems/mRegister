@@ -9,8 +9,7 @@ describe('UserRegistrationComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ UserRegistrationComponent ],
-      imports: [IonicModule.forRoot()]
+      imports: [UserRegistrationComponent, IonicModule.forRoot()]
     }).compileComponents();
 
     fixture = TestBed.createComponent(UserRegistrationComponent);
