@@ -1,0 +1,75 @@
+<ion-content [fullscreen]="true">
+  <div class="page-container">
+    <!-- hero image -->
+    <ion-img
+      src="https://ionicframework.com/docs/img/demos/card-media.png"
+    ></ion-img>
+
+    <!-- form -->
+    <form #loginForm="ngForm" (ngSubmit)="submit()" autocomplete="off">
+    <div class="form-container">
+      <ion-text>
+        <h1>Sign up</h1>
+      </ion-text>
+
+      <!-- email -->
+      <div class="input-container">
+        <ion-icon name="at-outline"></ion-icon>
+        <ion-input
+          placeholder="Email"
+          clearInput="true"
+          required="true"
+        ></ion-input>
+      </div>
+
+      <!-- name -->
+      <div class="input-container">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-input
+          placeholder="Full name"
+          clearInput="true"
+          required="true"
+        ></ion-input>
+      </div>
+
+      <!-- mobile -->
+      <div class="input-container">
+        <ion-icon name="call-outline"></ion-icon>
+        <ion-input
+          placeholder="Phone number"
+          type="number"
+          clearInput="true"
+          required="true"
+        ></ion-input>
+      </div>
+
+      <!-- terms -->
+      <ion-text class="terms-text">
+        <p>
+          By signing up, you're agreeing to our
+          <a href="#" target="_blank"
+          ><span class="link">terms and conditions</span></a
+          >
+          and
+          <a href="#" target="_blank"
+          ><span class="link">privacy policy</span></a
+          >.
+        </p>
+      </ion-text>
+
+      <ion-button type="submit" strong="true" expand="block" shape="round"
+      >Continue</ion-button
+      >
+    </div>
+    </form>
+
+    <!-- login -->
+    <ion-text>
+      <p class="login-prompt">
+        Joined us before?
+        <a href="#" target="_self"><span class="link">Login</span></a
+        >
+      </p>
+    </ion-text>
+  </div>
+</ion-content>

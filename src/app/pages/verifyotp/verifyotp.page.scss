@@ -1,0 +1,120 @@
+ion-header {
+  background: transparent;
+  padding-top: env(safe-area-inset-top);
+  ion-toolbar {
+    --background: transparent;
+    --border-color: transparent;
+    --min-height: 60px;
+    padding: 10px 15px;
+    ion-button {
+      height: 40px;
+      width: 40px;
+      --background: #fff;
+      --background-activated: #eee;
+      --background-focussed: #eee;
+      --border-radius: 20px;
+      --padding-start: 0;
+      --padding-end: 0;
+      --padding-top: 0;
+      --padding-bottom: 0;
+      ion-icon {
+        color: #2e4f57;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+ion-content {
+  --background: #e3e1e3;
+  .page-container {
+    padding: 20px;
+
+    ion-text {
+      // heading
+      h1 {
+        text-align: center;
+        color: #302e41;
+        font-size: 2rem;
+        font-weight: 600;
+      }
+      &.description {
+        text-align: center;
+        color: #6c6976;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        p {
+          margin: 20px 10px;
+          .emphasis {
+            font-weight: 600;
+            color: #302e41;
+          }
+        }
+      }
+    }
+
+    // hero
+    .hero-container {
+      display: grid;
+      justify-items: center;
+      padding-top: 30px;
+      ion-img {
+        width: 120px;
+      }
+    }
+
+    // verification code input
+    .verification-code-input-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+      padding: 40px 20px;
+      .input-container {
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: 60px;
+        height: 70px;
+        ion-input {
+          color: #302e41;
+          font-size: 3rem;
+          font-weight: 600;
+          text-align: center;
+          height: 70px;
+          background-color: #fff;
+          border-radius: 10px;
+          --padding-start: 10px;
+          --padding-end: 10px;
+        }
+      }
+    }
+
+    // cta
+    ion-button {
+      &.verify-button {
+        --box-shadow: none;
+        --background: #458124;
+        --background-activated: #4b7535;
+        --background-focussed: #4b7535;
+        --color: #fff;
+        --padding-top: 25px;
+        --padding-bottom: 25px;
+        font-weight: 600;
+      }
+    }
+
+    // resend
+    .resend-prompt-container {
+      padding: 20px 10px;
+      text-align: center;
+      ion-text {
+        color: #504e5d;
+        font-size: 1rem;
+        font-weight: 600;
+        .link {
+          color: #458124;
+        }
+      }
+    }
+  }
+}
