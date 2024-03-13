@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
-import {MaskitoElementPredicateAsync, MaskitoOptions} from "@maskito/core";
+import {MaskitoElementPredicate, MaskitoOptions} from "@maskito/core";
 import {MaskitoModule} from "@maskito/angular";
 
 @Component({
@@ -34,8 +34,8 @@ export class UkmobilenumberComponent {
     ],
   };
 
-  readonly maskPredicate: MaskitoElementPredicateAsync =
-    async (el) =>
+  readonly maskPredicate: MaskitoElementPredicate =
+    async (el:any) =>
       (el as HTMLIonInputElement).getInputElement();
 
 }
