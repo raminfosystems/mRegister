@@ -16,4 +16,9 @@ export class RegisterButtonComponent  implements OnInit {
 
   ngOnInit() {}
 
+  // Onclick event for register button redirect to otpconfirm page
+  register() {
+    window.location.href = '/otpconfirm';
+  } 
+
 }

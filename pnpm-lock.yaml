@@ -47,6 +47,9 @@ dependencies:
   '@ionic/angular':
     specifier: ^7.8.0
     version: 7.8.0(@angular/core@17.2.4)(@angular/forms@17.2.4)(@angular/router@17.2.4)(rxjs@7.8.1)(zone.js@0.14.4)
+  '@ionic/storage':
+    specifier: ^4.0.0
+    version: 4.0.0
   '@ionic/storage-angular':
     specifier: ^4.0.0
     version: 4.0.0(@angular/core@17.2.4)(rxjs@7.8.1)
@@ -62,6 +65,9 @@ dependencies:
   ionicons:
     specifier: ^7.2.2
     version: 7.2.2
+  jscrypto:
+    specifier: ^1.0.3
+    version: 1.0.3
   rxjs:
     specifier: ~7.8.1
     version: 7.8.1
@@ -6862,6 +6868,11 @@ packages:
   /jsbn@1.1.0:
     resolution: {integrity: sha512-4bYVV3aAMtDTTu4+xsDYa6sy9GyJ69/amsu9sYF2zqjiEoZA5xJi3BrfX3uY+/IekIu7MwdObdbDWpoZdBv3/A==}
     dev: true
+
+  /jscrypto@1.0.3:
+    resolution: {integrity: sha512-lryZl0flhodv4SZHOqyb1bx5sKcJxj0VBo0Kzb4QMAg3L021IC9uGpl0RCZa+9KJwlRGSK2C80ITcwbe19OKLQ==}
+    hasBin: true
+    dev: false
 
   /jsdoc-type-pratt-parser@4.0.0:
     resolution: {integrity: sha512-YtOli5Cmzy3q4dP26GraSOeAhqecewG04hoO8DY56CH4KJ9Fvv5qKWUCCo3HZob7esJQHCv6/+bnTy72xZZaVQ==}

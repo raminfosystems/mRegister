@@ -9,5 +9,9 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
+  },  {
+    path: 'otpconfirm',
+    loadComponent: () => import('./otpconfirm/otpconfirm.page').then( m => m.OtpconfirmPage)
   },
+
 ];
