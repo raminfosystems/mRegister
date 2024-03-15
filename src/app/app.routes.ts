@@ -9,17 +9,9 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
+  },  {
+    path: 'otpconfirm',
+    loadComponent: () => import('./otpconfirm/otpconfirm.page').then( m => m.OtpconfirmPage)
   },
-  {
-    path: 'signup',
-    loadComponent: () => import('./pages/signup/signup.page').then( m => m.SignupPage)
-  },
-  {
-    path: 'verifyotp',
-    loadComponent: () => import('./pages/verifyotp/verifyotp.page').then( m => m.VerifyotpPage)
-  },
-  {
-    path: 'privacy',
-    loadComponent: () => import('./pages/privacy/privacy.page').then( m => m.PrivacyPage)
-  },
+
 ];
