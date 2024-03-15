@@ -9,7 +9,9 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
-  },  {
+  },
+  {
+    // TODO: Protect Path and only enable with appropriate uuid.
     path: 'otpconfirm',
     loadComponent: () => import('./otpconfirm/otpconfirm.page').then( m => m.OtpconfirmPage)
   },

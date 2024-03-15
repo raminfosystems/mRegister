@@ -28,7 +28,7 @@ Follow these steps to get started with the Microfrontend Ionic User Registration
 2. **Install Dependencies**:
 
    ```
-   npm install
+   pnpm install
    ```
 
 3. **Run the Application**:
@@ -64,6 +64,6 @@ This project is open-source and available under the [MIT License](LICENSE).
 
 ## Feedback and Support
 
-If you have any questions, feedback, or need assistance, please don't hesitate to [create an issue](https://github.com/your-username/microfrontend-ionic-registration/issues). We're here to help!
+If you have any questions, feedback, or need assistance, please don't hesitate to [create an issue](https://github.com/raminfosystems/mregister/issues). We're here to help!
 
 Happy coding! 🚀📱
