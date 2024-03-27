@@ -38,6 +38,7 @@ export class OtpComponent  implements OnInit {
     }
   }
 
+  // TODO: Only allow number and prevent entering text or anything else.
 
-  
+
 }
