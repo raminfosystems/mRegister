@@ -1,17 +1,21 @@
 <form action="javascript: void(0)" class="otp-form" name="otp-form">
-  
+
   <div class="title">
     <p class="info">An otp has been sent to 07x xx xx xx 11</p>
     <p class="msg">Please enter OTP to verify</p>
   </div>
   <div class="otp-input-fields">
-    <input type="number" class="otp__digit otp__field__1" maxlength="1" required (keydown)="onInput($event)">
-    <input type="number" class="otp__digit otp__field__2" maxlength="1" required (keydown)="onInput($event)">
-    <input type="number" class="otp__digit otp__field__3" maxlength="1" required (keydown)="onInput($event)">
-    <input type="number" class="otp__digit otp__field__4" maxlength="1" required (keydown)="onInput($event)">
-    <input type="number" class="otp__digit otp__field__5" maxlength="1" required (keydown)="onInput($event)">
-    <input type="number" class="otp__digit otp__field__6" maxlength="1" required (keydown)="onInput($event)">
+    <input autofocus size="1" #otpField type="number" class="otp__digit otp__field__1" maxlength="1" required (keyup)="onKeyUp($event, otpField, 0)">
+    <input #otpField type="number" class="otp__digit otp__field__2" maxlength="1" required (keyup)="onKeyUp($event, otpField, 1)" readonly>
+    <input #otpField type="number" class="otp__digit otp__field__3" maxlength="1" required (keyup)="onKeyUp($event, otpField, 2)" readonly>
+    <input #otpField type="number" class="otp__digit otp__field__4" maxlength="1" required (keyup)="onKeyUp($event, otpField, 3)" readonly>
+    <input #otpField type="number" class="otp__digit otp__field__5" maxlength="1" required (keyup)="onKeyUp($event, otpField, 4)" readonly>
+    <input #otpField type="number" class="otp__digit otp__field__6" maxlength="1" required (keyup)="onKeyUp($event, otpField, 5)" readonly>
   </div>
-  
+
   <div class="result"><p id="_otp" class="_notok">855412</p></div>
+    <!-- Create a label for debug purpose for otp input fields and show its index -->
+  <div class="otp-input-fields">Current focus is on the index {{currentIndex}}
+  </div>
+  // TODO: ADD a further variables
 </form>

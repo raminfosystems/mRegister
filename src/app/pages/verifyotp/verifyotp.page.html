@@ -1,0 +1,60 @@
+<!-- page header -->
+<ion-header collapse="fade" mode="ios">
+  <ion-toolbar>
+    <ion-button slot="start" fill="solid" (click)="goback()">
+      <ion-icon name="chevron-back-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="page-container">
+    <!-- heading -->
+    <ion-text>
+      <h1>Verify Phone Number</h1>
+    </ion-text>
+
+    <!-- description -->
+    <ion-text class="description">
+      <p>
+        We sent a verification code to
+        <span class="emphasis">01628476268</span>. Enter the code below
+      </p>
+    </ion-text>
+
+    <!-- hero image -->
+    <div class="hero-container">
+      <ion-img
+        src="https://ionicframework.com/docs/img/demos/card-media.png"
+      ></ion-img>
+    </div>
+
+    <!-- verification code input -->
+    <div class="verification-code-input-container">
+      <div class="input-container">
+        <ion-input inputmode="numeric" maxlength="1"></ion-input>
+      </div>
+      <div class="input-container">
+        <ion-input inputmode="numeric" maxlength="1"></ion-input>
+      </div>
+      <div class="input-container">
+        <ion-input inputmode="numeric" maxlength="1"></ion-input>
+      </div>
+      <div class="input-container">
+        <ion-input inputmode="numeric" maxlength="1"></ion-input>
+      </div>
+    </div>
+
+    <!-- cta -->
+    <ion-button class="verify-button" expand="block" mode="ios">
+      VERIFY & PROCEED
+    </ion-button>
+
+    <!-- resend -->
+    <div class="resend-prompt-container">
+      <ion-text>
+        Didn't receive code? <a><span class="link">Resend code</span></a>
+      </ion-text>
+    </div>
+  </div>
+</ion-content>

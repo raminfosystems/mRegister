@@ -16,7 +16,7 @@ Welcome to the Micro-frontend Ionic User Registration project! This open-source 
 
 ## Getting Started
 
-Follow these steps to get started with the Microfrontend Ionic User Registration project:
+Follow these steps to get started with the Micro-frontend Ionic User Registration project:
 
 1. **Clone the Repository**:
 
@@ -43,7 +43,7 @@ Follow these steps to get started with the Microfrontend Ionic User Registration
 
 ## Usage
 
-This project is designed to be a microfrontend module that you can integrate into your existing Ionic applications. You can also use it as a standalone registration form in your projects.
+This project is designed to be a micro-frontend module that you can integrate into your existing Ionic applications. You can also use it as a standalone registration form in your projects.
 
 To integrate it into your project:
 

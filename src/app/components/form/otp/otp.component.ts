@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, QueryList, ViewChildren} from '@angular/core';
 
 @Component({
   selector: 'app-otp',
@@ -6,20 +6,24 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './otp.component.html',
   styleUrls: ['./otp.component.scss'],
 })
-export class OtpComponent  implements OnInit {
+export class OtpComponent implements OnInit {
+  @ViewChildren('otpField')
+  otpFields!: QueryList<ElementRef>;
+  currentIndex: number = 0;
 
-  constructor() { }
+  constructor() {
+  }
 
   // Prevent cross site request forgery
   ngOnInit() {
     const token = this.generateCsrfToken();
     this.setCsrfToken(token);
+
   }
 
   generateCsrfToken() {
     // Generate a random CSRF token
-    const token = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-    return token;
+    return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
   }
 
   setCsrfToken(token: string) {
@@ -31,14 +35,49 @@ export class OtpComponent  implements OnInit {
     // axios.defaults.headers.common['X-CSRF-Token'] = token;
   }
 
-  // prevent adding more than 1 digit in the input field
-  onInput(event: any) {
-    if (event.target.value.length > 1) {
-      event.target.value = event.target.value.slice(0, 1);
+  onKeyUp(event: any, input: any, index: number) {
+    const inputValue = event.target.value;
+    this.currentIndex = index;
+    // First check if the key code is backspace or escape character.
+    if (event.keyCode === 8 || event.keyCode === 27) {
+      //if it is a first box and has values then just clear the input box
+      if (index == 0 && inputValue.length > 0) {
+        //clear values
+        event.target.value = '';
+      }
+
+      if ((index > 0 && index <= 5) && inputValue.length == 0) {
+        const previousInput = this.otpFields.toArray()[index - 1];
+       inputValue.readonly = true;
+        previousInput.nativeElement.readonly = false;
+        previousInput.nativeElement.focus();
+      } else {
+        // Clear the current value
+        event.target.value = '';
+      }
     }
+
+
+    if (inputValue && inputValue.length === 1 && /^[0-9]$/.test(inputValue)) {
+      if (index < 5) {
+        const nextInput = this.otpFields.toArray()[index + 1];
+        inputValue.readonly = true;
+        nextInput.nativeElement.readonly = false;
+        nextInput.nativeElement.focus();
+        this.currentIndex = index + 1;
+      } else {
+        //You are on the 6th input box,
+        // and now you need to trigger to validate the OTP
+        this.validateOtp();
+      }
+    }
+
   }
 
-  // TODO: Only allow number and prevent entering text or anything else.
+
+  validateOtp() {
+    // Call your service here to validate the entered number
+  }
 
 
 }
